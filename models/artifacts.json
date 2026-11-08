@@ -1,0 +1,256 @@
+{
+  "model_version": "lgbm-20261108-1630",
+  "training_cutoff": "2016-05-22",
+  "forecast_start": "2016-05-23",
+  "forecast_end": "2016-06-19",
+  "horizon": 28,
+  "features": [
+    "product_code",
+    "dept_code",
+    "cat_code",
+    "wday",
+    "month",
+    "is_weekend",
+    "has_event",
+    "snap_CA",
+    "lag_1",
+    "lag_7",
+    "lag_14",
+    "lag_28",
+    "roll_mean_7",
+    "roll_mean_14",
+    "roll_mean_28",
+    "roll_std_7",
+    "roll_std_28"
+  ],
+  "categorical": [
+    "product_code",
+    "dept_code",
+    "cat_code"
+  ],
+  "dtypes": {
+    "product_code": "int64",
+    "dept_code": "int8",
+    "cat_code": "int8",
+    "wday": "int64",
+    "month": "int64",
+    "is_weekend": "int64",
+    "has_event": "int64",
+    "snap_CA": "int64",
+    "lag_1": "float64",
+    "lag_7": "float64",
+    "lag_14": "float64",
+    "lag_28": "float64",
+    "roll_mean_7": "float64",
+    "roll_mean_14": "float64",
+    "roll_mean_28": "float64",
+    "roll_std_7": "float64",
+    "roll_std_28": "float64"
+  },
+  "chosen_config": {
+    "objective": "regression",
+    "num_leaves": 15,
+    "min_child_samples": 50
+  },
+  "base_params": {
+    "n_estimators": 300,
+    "learning_rate": 0.05,
+    "subsample": 0.8,
+    "subsample_freq": 1,
+    "colsample_bytree": 0.8,
+    "random_state": 42,
+    "verbose": -1
+  },
+  "grid": [
+    {
+      "objective": "regression",
+      "num_leaves": 15,
+      "min_child_samples": 50
+    },
+    {
+      "objective": "regression",
+      "num_leaves": 31,
+      "min_child_samples": 20
+    },
+    {
+      "objective": "poisson",
+      "num_leaves": 15,
+      "min_child_samples": 50
+    },
+    {
+      "objective": "poisson",
+      "num_leaves": 31,
+      "min_child_samples": 20
+    }
+  ],
+  "validation_origins": [
+    "2016-01-04",
+    "2016-02-01",
+    "2016-02-29",
+    "2016-03-28"
+  ],
+  "holdout_origin": "2016-04-25",
+  "notes": "negative forecasts clipped to 0; recursive multi-step; bias = pred - actual",
+  "products": [
+    {
+      "product_id": "FOODS_1_041",
+      "department_id": "FOODS_1",
+      "category_id": "FOODS",
+      "product_code": 0,
+      "dept_code": 0,
+      "cat_code": 0
+    },
+    {
+      "product_id": "FOODS_2_035",
+      "department_id": "FOODS_2",
+      "category_id": "FOODS",
+      "product_code": 1,
+      "dept_code": 1,
+      "cat_code": 0
+    },
+    {
+      "product_id": "FOODS_2_081",
+      "department_id": "FOODS_2",
+      "category_id": "FOODS",
+      "product_code": 2,
+      "dept_code": 1,
+      "cat_code": 0
+    },
+    {
+      "product_id": "FOODS_3_226",
+      "department_id": "FOODS_3",
+      "category_id": "FOODS",
+      "product_code": 3,
+      "dept_code": 2,
+      "cat_code": 0
+    },
+    {
+      "product_id": "FOODS_3_362",
+      "department_id": "FOODS_3",
+      "category_id": "FOODS",
+      "product_code": 4,
+      "dept_code": 2,
+      "cat_code": 0
+    },
+    {
+      "product_id": "FOODS_3_682",
+      "department_id": "FOODS_3",
+      "category_id": "FOODS",
+      "product_code": 5,
+      "dept_code": 2,
+      "cat_code": 0
+    },
+    {
+      "product_id": "FOODS_3_707",
+      "department_id": "FOODS_3",
+      "category_id": "FOODS",
+      "product_code": 6,
+      "dept_code": 2,
+      "cat_code": 0
+    },
+    {
+      "product_id": "FOODS_3_820",
+      "department_id": "FOODS_3",
+      "category_id": "FOODS",
+      "product_code": 7,
+      "dept_code": 2,
+      "cat_code": 0
+    },
+    {
+      "product_id": "FOODS_3_821",
+      "department_id": "FOODS_3",
+      "category_id": "FOODS",
+      "product_code": 8,
+      "dept_code": 2,
+      "cat_code": 0
+    },
+    {
+      "product_id": "HOBBIES_1_228",
+      "department_id": "HOBBIES_1",
+      "category_id": "HOBBIES",
+      "product_code": 9,
+      "dept_code": 3,
+      "cat_code": 1
+    },
+    {
+      "product_id": "HOBBIES_1_394",
+      "department_id": "HOBBIES_1",
+      "category_id": "HOBBIES",
+      "product_code": 10,
+      "dept_code": 3,
+      "cat_code": 1
+    },
+    {
+      "product_id": "HOUSEHOLD_1_100",
+      "department_id": "HOUSEHOLD_1",
+      "category_id": "HOUSEHOLD",
+      "product_code": 11,
+      "dept_code": 4,
+      "cat_code": 2
+    },
+    {
+      "product_id": "HOUSEHOLD_1_142",
+      "department_id": "HOUSEHOLD_1",
+      "category_id": "HOUSEHOLD",
+      "product_code": 12,
+      "dept_code": 4,
+      "cat_code": 2
+    },
+    {
+      "product_id": "HOUSEHOLD_1_147",
+      "department_id": "HOUSEHOLD_1",
+      "category_id": "HOUSEHOLD",
+      "product_code": 13,
+      "dept_code": 4,
+      "cat_code": 2
+    },
+    {
+      "product_id": "HOUSEHOLD_1_227",
+      "department_id": "HOUSEHOLD_1",
+      "category_id": "HOUSEHOLD",
+      "product_code": 14,
+      "dept_code": 4,
+      "cat_code": 2
+    },
+    {
+      "product_id": "HOUSEHOLD_1_243",
+      "department_id": "HOUSEHOLD_1",
+      "category_id": "HOUSEHOLD",
+      "product_code": 15,
+      "dept_code": 4,
+      "cat_code": 2
+    },
+    {
+      "product_id": "HOUSEHOLD_1_247",
+      "department_id": "HOUSEHOLD_1",
+      "category_id": "HOUSEHOLD",
+      "product_code": 16,
+      "dept_code": 4,
+      "cat_code": 2
+    },
+    {
+      "product_id": "HOUSEHOLD_1_282",
+      "department_id": "HOUSEHOLD_1",
+      "category_id": "HOUSEHOLD",
+      "product_code": 17,
+      "dept_code": 4,
+      "cat_code": 2
+    },
+    {
+      "product_id": "HOUSEHOLD_1_535",
+      "department_id": "HOUSEHOLD_1",
+      "category_id": "HOUSEHOLD",
+      "product_code": 18,
+      "dept_code": 4,
+      "cat_code": 2
+    },
+    {
+      "product_id": "HOUSEHOLD_2_437",
+      "department_id": "HOUSEHOLD_2",
+      "category_id": "HOUSEHOLD",
+      "product_code": 19,
+      "dept_code": 5,
+      "cat_code": 2
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+pandas
+numpy
+pyarrow
+lightgbm
+scikit-learn
+plotly
+streamlit
+anthropic

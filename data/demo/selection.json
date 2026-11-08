@@ -1,0 +1,29 @@
+{
+  "store": "CA_1",
+  "products": [
+    "HOUSEHOLD_1_535",
+    "FOODS_3_362",
+    "FOODS_3_226",
+    "HOUSEHOLD_1_147",
+    "HOUSEHOLD_1_243",
+    "FOODS_3_682",
+    "HOUSEHOLD_1_247",
+    "FOODS_2_035",
+    "FOODS_3_820",
+    "HOBBIES_1_394",
+    "FOODS_2_081",
+    "HOUSEHOLD_1_282",
+    "HOUSEHOLD_1_227",
+    "FOODS_3_707",
+    "HOUSEHOLD_2_437",
+    "FOODS_3_821",
+    "HOBBIES_1_228",
+    "FOODS_1_041",
+    "HOUSEHOLD_1_142",
+    "HOUSEHOLD_1_100"
+  ],
+  "seed": 42,
+  "date_min": "2011-01-29",
+  "date_max": "2016-05-22",
+  "selection": "365 days before final 28-day holdout; zero_frac<=0.5; tertiles of mean sales (7 high/7 medium/6 low)"
+}
