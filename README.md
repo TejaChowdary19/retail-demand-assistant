@@ -4,7 +4,7 @@ Decision-support prototype on the historical M5 dataset (store CA_1, 20 products
 Forecasts 28 days with LightGBM (recursive) vs a seasonal naive baseline, converts forecasts to suggested
 replenishment quantities, and uses an LLM assistant with structured tool calls to explain results.
 
-**Live app:** (add URL after deployment)
+**Live app:** https://retail-demand-teja.streamlit.app
 
 ## Run locally
     python3.12 -m venv .venv && source .venv/bin/activate
