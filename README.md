@@ -31,5 +31,10 @@ Stock levels are demo or user-entered. Sales may understate demand when items we
 No prices, no validated prediction intervals, no supplier minimums, costs, shelf life or delivery uncertainty.
 LightGBM does not beat the baseline on every product; see the Model Evaluation page.
 
+## Not included in this version
+- Exploratory analysis notebook (summary charts are on the Overview page instead)
+- Price features and validated prediction intervals
+- Demo recording (add link here if available)
+
 ## Contributors
 Divya Teja. Built November 8, 2026.
