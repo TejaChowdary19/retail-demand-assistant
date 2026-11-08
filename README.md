@@ -102,6 +102,7 @@ host's Secrets as `ANTHROPIC_API_KEY`; it is not in the code or the repository. 
 ## Limitations
 
 - Historical dataset; forecasts are demonstrations, not current predictions.
+- 43% of product-days have zero sales (intermittent demand); the store records zero sales on Christmas Day each year.
 - Low observed sales may reflect stockouts rather than low demand; the data has no stock records.
 - Recursive forecasting lets errors compound across the 28 days; intermittent demand keeps WAPE high.
 - The holdout shows overforecasting on average; one 28-day window is a small sample.
